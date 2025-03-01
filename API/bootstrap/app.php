@@ -15,7 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
-            'jwt.guard' => RefreshToken::class
+            'jwt.guard' => RefreshToken::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
