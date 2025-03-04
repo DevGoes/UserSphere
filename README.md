@@ -1,4 +1,4 @@
-# 🚀 Desenvolvendo um Sistema de Gestão de Projetos e Tarefas com Vue.js e Laravel
+# 🚀 Desenvolvendo um Sistema de Gestão de Projetos e Tarefas
 
 Nos últimos dias, tenho trabalhado em um **Sistema de Gestão de Projetos e Tarefas**, focado em **organização, produtividade e controle de tarefas**. O objetivo do projeto é oferecer uma solução ágil para criar, gerenciar e acompanhar o progresso de projetos, tudo isso com uma interface intuitiva e responsiva.
 
