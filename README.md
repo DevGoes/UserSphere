@@ -15,8 +15,7 @@ Nos últimos dias, tenho trabalhado em um **Sistema de Gestão de Projetos e Tar
 ✅ Gerenciamento de Projetos (CRUD completo)  
 ✅ Gerenciamento de Tarefas dentro de cada projeto  
 ✅ Edição e Atualização de Tarefas diretamente pelo sistema  
-✅ Alteração de Status das tarefas (Pendente, Em andamento, Concluído)  
-✅ Interface Responsiva com Bootstrap 5  
+✅ Alteração de Status das tarefas (Pendente, Em andamento, Concluído)
 
 ## 🎨 Seções do Projeto
 
@@ -29,12 +28,6 @@ Nos últimos dias, tenho trabalhado em um **Sistema de Gestão de Projetos e Tar
 ## 💡 Desafios e Aprendizados
 
 Este projeto me proporcionou um grande aprendizado na **integração entre Vue.js e Laravel**, além de reforçar a importância de uma arquitetura bem organizada para garantir **escalabilidade**. Também foi essencial aprofundar o uso do **Vue Router, Bootstrap e manipulação de modais** para oferecer uma experiência fluida ao usuário.
-
-## 📢 Próximos Passos
-
-- Melhorar a interface do sistema
-- Adicionar funcionalidades como **upload de arquivos**
-- Implementar **relatórios estatísticos** sobre os projetos e tarefas
 
 🚀 **Gostou do projeto? Estou aberto a sugestões e feedbacks!** 👨‍💻🔗
 
