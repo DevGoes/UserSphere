@@ -4,7 +4,7 @@
 
       <div class="col-md-3 border-right">
         <div class="d-flex flex-column align-items-center text-center">
-          <img src="@/assets/icons/userProfile.svg" alt="Foto de perfil" class="rounded-circle mt-3 mb-3 profile-img" />
+          <img src="@/assets/icons/userProfile.svg" alt="Foto de perfil" class="rounded-circle mt-5 mb-3 profile-img" />
           <span class="font-weight-bold">{{ user.name }}</span>
           <span class="text-black-50">{{ user.email }}</span>
         </div>
@@ -14,11 +14,15 @@
         <div class="p-3 py-5">
           <h4 class="title text-center mb-4">Configurações do Perfil</h4>
           <form @submit.prevent="saveProfile">
+
             <div class="row mt-3 justify-content-center">
               <div class="col-md-5">
                 <label class="labels">Nome</label>
                 <input v-model="user.name" type="text" class="form-control" placeholder="Nome" required />
               </div>
+            </div>
+
+            <div class="row mt-3 justify-content-center">
               <div class="col-md-5">
                 <label class="labels">Email</label>
                 <input v-model="user.email" type="email" class="form-control" placeholder="E-mail" required />
@@ -26,10 +30,6 @@
             </div>
 
             <div class="row mt-3 justify-content-center">
-              <div class="col-md-5">
-                <label class="labels">Celular</label>
-                <input v-model="user.phone" type="tel" class="form-control" placeholder="Número de Celular" />
-              </div>
               <div class="col-md-5">
                 <label class="labels">Senha</label>
                 <input v-model="user.password" type="password" class="form-control" placeholder="Nova senha" />
@@ -62,7 +62,6 @@ export default {
       user: {
         name: "",
         email: "",
-        phone: "",
         password: "",
       },
       feedbackMessage: "",
@@ -84,7 +83,6 @@ export default {
       this.user = {
         name: response.data.name || "",
         email: response.data.email || "",
-        phone: response.data.phone || "",
         password: ""
       };
     } catch (error) {
@@ -106,7 +104,6 @@ export default {
         const updatedUser = {
           name: this.user.name,
           email: this.user.email,
-          phone: this.user.phone,
         };
 
         // Só adiciona a senha se o usuário digitar algo
@@ -145,27 +142,21 @@ export default {
 
 .button {
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
   background-color: #5b2ab5;
   color: #fff;
-  padding: 15px 35px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  padding: 12px 35px;
+  border: 2px solid #5b2ab5;
+  border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  font-size: 16px;
-  text-transform: uppercase;
+  font-size: 15px;
 }
 
 .button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  background-color: rgb(91, 42, 181);
-}
-
-.button:active {
-  transform: translateY(0.5em);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  color: #5b2ab5;
+  border: 2px solid #5b2ab5;
 }
 </style>

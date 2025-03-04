@@ -27,7 +27,13 @@
         </div>
         <div class="d-flex align-items-start">
           <button class="btn p-0 me-2" @click="changeTaskStatus(task)">
-            <img src="@/assets/icons/status.svg" alt="Status" width="24" height="24">
+            <img
+                src="@/assets/icons/status.svg"
+                alt="Status"
+                width="24"
+                height="24"
+                :class="getNextStatusClass(task.status)"
+            >
           </button>
 
           <button class="btn p-0 me-2" @click="editTask(task)">
@@ -37,6 +43,7 @@
           <button class="btn p-0 me-2" @click="deleteTask(task.id)">
             <img src="@/assets/icons/delete.svg" alt="Delete" width="24" height="24">
           </button>
+
         </div>
       </div>
     </div>
@@ -202,6 +209,11 @@ export default {
       } catch (error) {
         console.error("Erro ao atualizar tarefa", error);
       }
+    },
+    getNextStatusClass(status) {
+      if (status === "Pendente") return "next-status-blue"; // Azul para "Em andamento"
+      if (status === "Em andamento") return "next-status-green"; // Verde para "Concluído"
+      return "next-status-yellow"; // Amarelo para "Pendente" (reinicia o ciclo)
     }
   },
   mounted() {
@@ -255,22 +267,30 @@ export default {
   background-color: #5b2ab5;
   color: #fff;
   padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border: 2px solid #5b2ab5;
+  border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   font-size: 15px;
 }
 
 .button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  background-color: rgb(91, 42, 181);
+  background-color: #fff;
+  color: #5b2ab5;
+  border: 2px solid #5b2ab5;
 }
 
-.button:active {
-  transform: translateY(0.5em);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+.next-status-blue {
+  filter: invert(39%) sepia(93%) saturate(1082%) hue-rotate(192deg) brightness(95%) contrast(92%);
 }
+
+.next-status-green {
+  filter: invert(47%) sepia(98%) saturate(305%) hue-rotate(91deg) brightness(90%) contrast(91%);
+}
+
+.next-status-yellow {
+  filter: invert(85%) sepia(94%) saturate(463%) hue-rotate(360deg) brightness(95%) contrast(90%);
+}
+
+
 </style>

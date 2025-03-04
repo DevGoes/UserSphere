@@ -264,23 +264,17 @@ export default {
   background-color: #5b2ab5;
   color: #fff;
   padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border: 2px solid #5b2ab5;
+  border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   font-size: 15px;
 }
 
 .button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  background-color: rgb(91, 42, 181);
-}
-
-.button:active {
-  transform: translateY(0.5em);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  color: #5b2ab5;
+  border: 2px solid #5b2ab5;
 }
 
 </style>
